@@ -1,0 +1,13 @@
+<!--
+  Turtlebot 3
+  Host mapping save lauch file.
+  
+  Ed Epp
+  2/14/18
+  epp@zdome.net
+  -->
+
+<launch>
+    <node name="map_saver" pkg="map_server" type="map_saver"
+        args="-f $(find host)/maps/map" />
+</launch>

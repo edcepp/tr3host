@@ -1,0 +1,18 @@
+<!--
+  Turtlebot 3
+  Host navigation lauch file.
+
+  Ed Epp
+  2/14/18
+  epp@zdome.net
+  -->
+
+<launch>
+    <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+         <arg name="map_file" value="$(find host)/maps/map.yaml"/>
+    </include>
+
+    <node name="rviz" pkg="rviz" type="rviz"
+        args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_nav.rviz" />
+    
+</launch>
